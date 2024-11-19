@@ -5,8 +5,16 @@ const app = express();
 
 app.use(json());  // Cấu hình body-parser
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// Lấy đường dẫn tuyệt đối đến thư mục chứa file hiện tại
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 app.set('view engine', 'ejs');
-app.set('views', './views');
+//app.set('views', './views');
+app.set('views', __dirname + '/views');
 
 app.get('/', (req, res) => {
     res.send('Welcome to the API!');

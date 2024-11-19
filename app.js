@@ -10,8 +10,8 @@ app.set('views', './views');
 
 app.use('/api/reddit', redditRoutes);  // Sử dụng các route từ redditRoutes
 
-const port = 8000;
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+export default app;
+// const port = 8000;
+// app.listen(port, () => {
+//     console.log(`Server is running on port ${port}`);
+// });

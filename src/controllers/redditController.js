@@ -34,6 +34,6 @@ export async function getPostDetails(req, res) {
         const posts = await firebaseService.getPostDetails();
         res.render('reddit/list', { posts });
     } catch (error) {
-        res.status(500).send('Lỗi khi lấy chi tiết bài viết');
+        res.status(500).send('Lỗi khi lấy chi tiết bài viết - '+error);
     }
 }

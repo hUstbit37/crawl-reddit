@@ -15,5 +15,7 @@
     "express": "^4.21.1",
     "firebase-admin": "^13.0.0",
     "puppeteer": "^23.8.0"
-  }
+  },
+  "postinstall": "puppeteer browsers install chrome",
+  "gcp-build": "node node_modules/puppeteer/install.mjs"
 }
